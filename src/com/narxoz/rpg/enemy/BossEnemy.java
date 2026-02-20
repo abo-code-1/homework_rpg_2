@@ -12,7 +12,7 @@ public class BossEnemy extends AbstractEnemy {
     private boolean hasBreathAttack;
     private int wingspan;
 
-    BossEnemy(String name, int health, int damage, int defense, int speed) {
+    public BossEnemy(String name, int health, int damage, int defense, int speed) {
         super();
         this.name = name;
         this.health = health;

@@ -4,7 +4,7 @@ import com.narxoz.rpg.combat.Ability;
 
 public class BasicEnemy extends AbstractEnemy {
 
-    BasicEnemy(String name, int health, int damage, int defense, int speed) {
+    public BasicEnemy(String name, int health, int damage, int defense, int speed) {
         super();
         this.name = name;
         this.health = health;
