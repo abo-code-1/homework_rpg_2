@@ -2,21 +2,20 @@ package com.narxoz.rpg.enemy;
 
 import com.narxoz.rpg.combat.Ability;
 
-public class Goblin extends AbstractEnemy {
+public class BasicEnemy extends AbstractEnemy {
 
-    public Goblin(String name) {
+    BasicEnemy(String name, int health, int damage, int defense, int speed) {
         super();
         this.name = name;
-        this.health = 100;
-        this.damage = 15;
-        this.defense = 5;
-        this.speed = 35;
-        this.aiBehavior = "AGGRESSIVE";
+        this.health = health;
+        this.damage = damage;
+        this.defense = defense;
+        this.speed = speed;
     }
 
     @Override
     public void displayInfo() {
-        System.out.println("=== " + name + " (Goblin) ===");
+        System.out.println("=== " + name + " (Basic Enemy) ===");
         System.out.println("Health: " + health + " | Damage: " + damage
                 + " | Defense: " + defense + " | Speed: " + speed);
         System.out.println("Element: " + element);
@@ -32,7 +31,7 @@ public class Goblin extends AbstractEnemy {
 
     @Override
     public Enemy clone() {
-        Goblin copy = new Goblin(this.name);
+        BasicEnemy copy = new BasicEnemy(this.name, this.health, this.damage, this.defense, this.speed);
         copyBaseFields(copy);
         return copy;
     }
